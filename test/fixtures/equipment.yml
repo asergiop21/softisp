@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  eq_mac: MyString
+  eq_state: 1
+  eq_observation: MyText
+  cat_id: 1
+  category: MyString
+  eq_node: MyString
+
+two:
+  eq_mac: MyString
+  eq_state: 1
+  eq_observation: MyText
+  cat_id: 1
+  category: MyString
+  eq_node: MyString

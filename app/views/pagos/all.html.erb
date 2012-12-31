@@ -1,0 +1,30 @@
+<h1>Resumen de Pagos</h1>
+<%= form_tag '', :method =>'get' do %>
+  <%= text_field_tag :cl_apellido %>
+  <%= submit_tag "search" %>
+<% end %>
+
+<% if @all %>
+  <table class=table>
+    <tr>
+      <th>Apellido</th>
+      <th>Nombre</th>
+      <th>Domicilio</th>
+      <th>Telefono</th>
+      <th>Celular</th>
+      <th></th>
+    </tr>
+
+    <% @all.each do |datos| %>
+      <tr>
+        <td><%= datos['cl_apellido'] %></td>
+        <td><%= datos['cl_nombre'] %></td>
+        <td><%= datos['cl_domicilio'] %></td>
+        <td><%= datos['cl_telefono'] %></td>
+        <td><%= datos['cl_celular'] %></td>
+        <td><%= link_to 'Resumen', cliente_pagos_path(datos['cliente_id']) %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+<br />

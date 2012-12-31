@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lc_nombre: MyString
+  lc_dpto: MyString
+  lc_cp: MyString
+  lc_provincia: MyString
+  lc_pais: MyString
+
+two:
+  lc_nombre: MyString
+  lc_dpto: MyString
+  lc_cp: MyString
+  lc_provincia: MyString
+  lc_pais: MyString

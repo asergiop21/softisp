@@ -1,0 +1,23 @@
+  <%= simple_form_for [@cliente, @pago] , :html=> {:class=>'form-inline'}  do |f| %>
+      <div class=container>
+        <div class="row-fluid">
+          <%= f.error_notification %>
+            <div class=span12>
+              <%= f.input :pg_numfact, :label =>'Número de Factura',  :wrapper_html => { :class => 'span6'} %>
+              <%= f.input :pg_fecha,:label=>'Fecha de Emisión', :required=>'true', :wrapper_html => { :class => 'span6', :readonly =>true}, :as=>:string,  :controls_html => { :style => 'min-width: 600px' }, :input_html => { :style => 'width: auto', :value => Time.now.strftime("%d-%m-%Y") } %>
+            </div>
+            <div class=span12>
+              <%= f.input :pg_cant,:label=> 'Cant.',  :required=> true, :wrapper_html => { :class => 'span1'} , :input_html => { :class => 'input-mini' }%>
+              <%= f.input :pg_detalle,:label=> 'Descripcion',  :required=> true, :wrapper_html => { :class => 'span8'} , :input_html => { :class => 'input-xxlarge' }%>
+              <%= f.input :pg_debe,:label=> 'Precio', :as=>:string,  :required=> true, :wrapper_html => { :class => 'span1'}, :input_html=> { :class => 'input-mini' }%>
+              <%= f.input :pg_haber,:label=> 'Pago', :as=>:string,  :required=> true, :wrapper_html => { :class => 'span1'}, :input_html => { :class => 'input-mini' }%>
+            </div>
+          </div> 
+         </div> 
+
+  <div class="form-actions">
+    <%= f.submit 'Guardar', :class =>'btn btn-primary' %>
+  </div>
+
+                                                                                                                                                                              <% end %>
+

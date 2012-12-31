@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Eq mac:</b>
+  <%= @equipment.eq_mac %>
+</p>
+
+<p>
+  <b>Eq state:</b>
+  <%= @equipment.eq_state %>
+</p>
+
+<p>
+  <b>Eq observation:</b>
+  <%= @equipment.eq_observation %>
+</p>
+
+<p>
+  <b>Cat:</b>
+  <%= @equipment.cat_id %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @equipment.category %>
+</p>
+
+<p>
+  <b>Eq node:</b>
+  <%= @equipment.eq_node %>
+</p>
+
+
+<%= link_to 'Edit', edit_equipment_path(@equipment) %> |
+<%= link_to 'Back', equipment_index_path %>

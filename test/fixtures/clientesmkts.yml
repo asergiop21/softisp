@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cmk_targetaddr: MyString
+  cmk_interface: MyString
+  cmk_parent: MyString
+  cmk_packetmarks: MyString
+  cmk_direction: MyString
+  cmk_priority: 1
+  cmk_queue: MyString
+  cmk_limitat: MyString
+  cmk_maxlimit: MyString
+  cmk_burstlimit: MyString
+  cmk_burstthreshold: MyString
+  cmk_burttime: MyString
+  cmk_totalqueue: MyString
+
+two:
+  cmk_targetaddr: MyString
+  cmk_interface: MyString
+  cmk_parent: MyString
+  cmk_packetmarks: MyString
+  cmk_direction: MyString
+  cmk_priority: 1
+  cmk_queue: MyString
+  cmk_limitat: MyString
+  cmk_maxlimit: MyString
+  cmk_burstlimit: MyString
+  cmk_burstthreshold: MyString
+  cmk_burttime: MyString
+  cmk_totalqueue: MyString

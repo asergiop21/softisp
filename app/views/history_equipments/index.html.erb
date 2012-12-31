@@ -1,0 +1,21 @@
+<h1>Listing history_equipments</h1>
+
+<table class=table>
+  <tr>
+    <th>He state</th>
+    <th>He observation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @history_equipments.each do |history_equipment| %>
+  <tr>
+    <td><%= history_equipment.he_state %></td>
+    <td><%= history_equipment.he_observation %></td>
+    <td><%= link_to 'Ver', history_equipment %></td>
+    <td><%= link_to 'Editar', edit_history_equipment_path(history_equipment) %></td>
+    <td><%= link_to 'Eliminar', history_equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>

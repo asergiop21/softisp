@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pl_nombre: MyString
+  pl_importe: 
+  pl_importe: 
+  pl_vel: MyString
+  pl_elim: false
+  pl_user: 1
+  pl_recar1: 
+  pl_recar1: 
+  pl_recar2: 
+  pl_recar2: 
+
+two:
+  pl_nombre: MyString
+  pl_importe: 
+  pl_importe: 
+  pl_vel: MyString
+  pl_elim: false
+  pl_user: 1
+  pl_recar1: 
+  pl_recar1: 
+  pl_recar2: 
+  pl_recar2: 

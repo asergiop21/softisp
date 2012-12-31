@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  he_state: 1
+  he_observation: MyText
+
+two:
+  he_state: 1
+  he_observation: MyText

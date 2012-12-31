@@ -1,0 +1,22 @@
+<h1>Listado Mikrotik</h1>
+
+<table class=table>
+  <tr>
+    <th>Usuario</th>
+    <th>Ip</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mktcxes.each do |mktcx| %>
+  <tr>
+    <td><%= mktcx.mkcusuario %></td>
+    <td><%= mktcx.mkcip %></td>
+    <td><%= link_to 'Edit', edit_mktcx_path(mktcx) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

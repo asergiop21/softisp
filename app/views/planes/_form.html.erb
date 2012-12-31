@@ -1,0 +1,23 @@
+<%= simple_form_for [@plane] , :html=> {:class=>'form-inline'}  do |f| %>
+      <div class=container>
+        <div class="row-fluid">
+          <%= f.error_notification %>
+            <div class=span6 >
+              
+              <%= f.input :pl_nombre, :label =>'Nombre del Plan'   %>
+              <%= f.input :pl_vel, :label =>'Velocidad' %>
+              <%= f.input :pl_importe, :label =>'Importe' %>
+              <%= f.input :pl_recar1, :label =>'Recargo 1' %>
+              <%= f.input :pl_recar2, :label =>'Recargo 2' %>
+              <%= f.input :pl_elim, :label =>'Eliminado' %>
+              
+              
+            </div>
+          </div> 
+         </div> 
+
+<div class="form-actions">
+    <%= f.submit 'Guardar', :class =>'btn btn-primary' %>
+  </div>                                                  
+                                                                                                                                                                              <% end %>
+

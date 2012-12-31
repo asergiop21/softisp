@@ -1,0 +1,15 @@
+  <%= simple_form_for [@localidade] , :html=> {:class=>'form-inline'}  do |f| %>
+      <div class=container>
+          <%= f.error_notification %>
+            <div class=span12>
+              <%= f.input :lc_nombre, :label =>'Nombre',  :wrapper_html => { :class => 'span6'} %>
+              <%= f.input :lc_dpto, :label =>'Departamento',  :wrapper_html => { :class => 'span6'} %>
+              <%= f.input :lc_cp, :label =>'Codigo Postal',  :wrapper_html => { :class => 'span6'} %>
+              <%= f.input :lc_provincia, :label =>'Provincia',  :wrapper_html => { :class => 'span6'} %>
+              <%= f.input :lc_pais, :label =>'Pais',  :wrapper_html => { :class => 'span6'} %>
+            </div>
+         </div> 
+
+  <div class="form-actions">
+    <%= f.submit 'Guardar', :class =>'btn btn-primary' %>
+  </div>                                                                                                                                                                      <% end %>

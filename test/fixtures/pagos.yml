@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pg_debe: 9.99
+  pg_haber: 9.99
+  pg_detalle: MyString
+  pg_fecha: 2012-11-13
+  pg_user: 1
+  pg_numfact: MyString
+  pg_numtar: MyString
+  pg_numcheq: MyString
+  pg_idcuota: 1
+  cliente_id: 1
+
+two:
+  pg_debe: 9.99
+  pg_haber: 9.99
+  pg_detalle: MyString
+  pg_fecha: 2012-11-13
+  pg_user: 1
+  pg_numfact: MyString
+  pg_numtar: MyString
+  pg_numcheq: MyString
+  pg_idcuota: 1
+  cliente_id: 1

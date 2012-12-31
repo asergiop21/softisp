@@ -1,0 +1,12 @@
+<%= simple_form_for(@history_equipment) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :he_state %>
+    <%= f.input :he_observation %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

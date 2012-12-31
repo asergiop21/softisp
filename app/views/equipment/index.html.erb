@@ -1,0 +1,31 @@
+<h1>Listado de Equipos</h1>
+
+<table class=table>
+  <tr>
+    <th>Mac</th>
+    <th>Estado</th>
+    <th>Observación</th>
+    <th>Categoria</th>
+    <th>Nodo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @equipment.each do |equipment| %>
+  <tr>
+    <td><%= equipment.eq_mac %></td>
+    <td><%= state(equipment.eq_state) %></td>
+    <td><%= equipment.eq_observation %></td>
+    <td><%= equipment.category %></td>
+    <td><%= nodos(equipment.eq_node.to_i) %></td>
+    <td><%= link_to 'ver', equipment %></td>
+    <td><%= link_to 'Editar', edit_equipment_path(equipment) %></td>
+    <td><%= link_to 'Eliminar', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Equipo', new_equipment_path %>

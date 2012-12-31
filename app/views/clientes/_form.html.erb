@@ -1,0 +1,33 @@
+<%= simple_form_for @cliente, :defaults =>{:input_html => {:class =>'span10'}} do |f| %>
+  <div class=container>
+  <div class="form-inputs">
+        <div class="row-fluid">
+
+  <div class=span6>
+  <%= f.error_notification %>
+  <%= f.input :cl_apellido,:label=> 'Apellido',  :required=> true, :autofocus=>true %>
+  <%= f.input :cl_nombre,:label=> 'Nombre',  :required=> true %>
+  <%= f.input :cl_barrio,:label=> 'Barrio'%>
+  <%= f.input :cl_domicilio,:label=> 'Domicilio',  :required=> true %>
+  <%= f.input :Localidad_id do %>
+      <%= f.select :localidad_id,  Localidade.all.map {|l|[l.lc_nombre, l.id]}, prompt: "Seleccione una Localidad" %>
+  <% end  %>
+  <%= f.input :cl_telefono,:label=> 'Telefono',  :required=> true %>
+  <%= f.input :cl_celular,:label=> 'Celular 1',  :required=> true %>
+  <%= f.input :cl_celular2,:label=> 'Celular 2' %>
+</div>
+<div class=span6>
+  <%= f.input :cl_email,:label=> 'Email' %>
+  <%= f.input :cl_dni,:label=> 'Dni',  :required=> true %>
+  <%= f.input :cl_observaciones, :label => 'Observaciones', :input_html => { :rows => '5'  } %>
+  <%= f.input :cl_cuit,:label=> 'Cuit' %>
+  <%= f.input :cl_fecha,:label=>'Fecha de Nacimiento', :required=>'true', :wrapper_html => { :class => 'span12'}, :controls_html => { :style => 'min-width: 600px' }, :input_html => { :style => 'width: auto' } %>
+  <%= f.input :cl_referencia,:label=> 'Referencia',  :required=> true %>
+</div>
+</div>
+</div>
+  <div class="form-actions">
+    <%= f.submit 'Guardar', :class =>'btn btn-primary' %>
+  </div>
+</div>
+<% end %>

@@ -1,0 +1,121 @@
+<%= form_for(@cliente) do |f| %>
+  <% if @cliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+
+      <ul>
+      <% @cliente.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cl_apellido %><br />
+    <%= f.text_field :cl_apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_nombre %><br />
+    <%= f.text_field :cl_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_barrio %><br />
+    <%= f.text_field :cl_barrio %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_domicilio %><br />
+    <%= f.text_field :cl_domicilio %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_telefono %><br />
+    <%= f.text_field :cl_telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_celular %><br />
+    <%= f.text_field :cl_celular %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_celular2 %><br />
+    <%= f.text_field :cl_celular2 %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_email %><br />
+    <%= f.text_field :cl_email %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_dni %><br />
+    <%= f.text_field :cl_dni %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_observaciones %><br />
+    <%= f.text_field :cl_observaciones %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_cuit %><br />
+    <%= f.text_field :cl_cuit %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_fecnac %><br />
+    <%= f.date_select :cl_fecnac %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_numcliente %><br />
+    <%= f.text_field :cl_numcliente %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_referencia %><br />
+    <%= f.text_field :cl_referencia %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_empresa %><br />
+    <%= f.number_field :cl_empresa %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_user %><br />
+    <%= f.number_field :cl_user %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_fecha %><br />
+    <%= f.date_select :cl_fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_time %><br />
+    <%= f.time_select :cl_time %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_elim %><br />
+    <%= f.check_box :cl_elim %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_domdes %><br />
+    <%= f.text_field :cl_domdes %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_bardes %><br />
+    <%= f.text_field :cl_bardes %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_refdes %><br />
+    <%= f.text_field :cl_refdes %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_idcat %><br />
+    <%= f.number_field :cl_idcat %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_cat %><br />
+    <%= f.text_field :cl_cat %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_user %><br />
+    <%= f.number_field :cl_user %>
+  </div>
+  <div class="field">
+    <%= f.label :cl_precliente %><br />
+    <%= f.check_box :cl_precliente %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

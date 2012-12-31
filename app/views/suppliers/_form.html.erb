@@ -1,0 +1,26 @@
+<%= simple_form_for @supplier, :defaults =>{:input_html => {:class =>'span8'}} do |f| %>
+  <div class=container>
+  <div class="form-inputs">
+        <div class="row-fluid">
+
+  <%= f.error_notification %>
+
+  <div class="form-inputsi span6">
+    <%= f.input :pv_name, :label=> 'Nombre' %>
+    <%= f.input :pv_address, :label =>'Direccion' %>
+    <%= f.input :pv_locality, :label => 'Localidad'%>
+    <%= f.input :pv_province, :label =>'Provincia' %>
+  </div>
+  <div class="form-inputsi span6">
+ <%= f.input :pv_cel, :label => 'Celular' %>
+    <%= f.input :pv_cel1, :label =>'Celular 2' %>
+    <%= f.input :pv_phone, :label =>'Telefono' %>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Guardar' , :class =>'btn btn-primary'%>
+  </div>
+<% end %>

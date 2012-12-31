@@ -1,0 +1,25 @@
+<%= simple_form_for [@cliente, @client_equipment], :defaults => {:input_html => {:class =>'span10'}} do |f| %>
+  <div class=container>
+     <div class="form-inputs">
+        <div class="row-fluid">
+
+            <%= f.error_notification %>
+              <div class="form-inputs span6">
+                  <%= f.input :equipment_id, :label=> 'Equipamiento' do %>
+                    <%= f.select :equipment_id,  Equipment.where(:eq_state=>'1').map {|l|[l.eq_mac, l.id]}, prompt: "Seleccione una mac" %>
+                    <% end  %>
+                  <%= f.input :ce_observation, :label => 'Observación', :input_html =>{ :rows=>'5'} %>
+              </div>
+  <div class="form-inputs span6">
+    <%= f.input :ce_resp_equip, :label => 'Responsable Equipo' %>
+    <%= f.input :ce_respswitch, :label => 'Responsable Switch' %>
+    <%= f.input :ce_resptrafo, :label =>'Responsable Trafo' %>
+    <%= f.input :ce_linked, :label => 'Vinculado' %>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit 'Guardar', :class =>'btn btn-primary' %>
+  </div>
+<% end %>

@@ -1,0 +1,53 @@
+<%= form_for [@cliente, @pago] do |f| %>
+  <% if @pago.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pago.errors.count, "error") %> prohibited this pago from being saved:</h2>
+
+      <ul>
+      <% @pago.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pg_debe %><br />
+    <%= f.text_field :pg_debe %>
+  </div>
+  <div class="field">
+    <%= f.label :pg_haber %><br />
+    <%= f.text_field :pg_haber %>
+  </div>
+  <div class="field">
+    <%= f.label :pg_detalle %><br />
+    <%= f.text_field :pg_detalle %>
+  </div>
+  <div class="field">
+    <%= f.label :pg_fecha %><br />
+    <%= f.date_select :pg_fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :pg_user %><br />
+    <%= f.number_field :pg_user %>
+  </div>
+  <div class="field">
+    <%= f.label :pg_numfact %><br />
+    <%= f.text_field :pg_numfact %>
+  </div>
+  <div class="field">
+    <%= f.label :pg_numtar %><br />
+    <%= f.text_field :pg_numtar %>
+  </div>
+  <div class="field">
+    <%= f.label :pg_numcheq %><br />
+    <%= f.text_field :pg_numcheq %>
+  </div>
+  <div class="field">
+    <%= f.label :pg_idcuota %><br />
+    <%= f.number_field :pg_idcuota %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

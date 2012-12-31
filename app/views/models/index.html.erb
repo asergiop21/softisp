@@ -1,0 +1,25 @@
+<h1>Listado de Modelos</h1>
+<table class=table>
+<tr>
+    <th>Nombre</th>
+    <th>Marca</th>
+    <th>Observacion</th>
+    <th>Creado</th>
+ </tr> 
+<tr>
+
+<%@models.each do |m| %>
+<td><%= m['md_name']%></td>
+<td><%= m['mc_name']%></td>
+<td><%= m['mc_observation']%></td>
+<td><%= m['created_at']%></td>
+<td><%= link_to "Editar", "/makes/#{m['make_id']}/models/#{m['id']}/edit" %></td>
+</tr>
+
+<% end %>
+<table>
+
+
+
+
+

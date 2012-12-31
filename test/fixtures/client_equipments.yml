@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ce_state: 1
+  ce_observation: MyText
+  ce_resp_equip: 1
+  ce_respswitch: 1
+  ce_resptrafo: 1
+  ce_linked: 1
+
+two:
+  ce_state: 1
+  ce_observation: MyText
+  ce_resp_equip: 1
+  ce_respswitch: 1
+  ce_resptrafo: 1
+  ce_linked: 1

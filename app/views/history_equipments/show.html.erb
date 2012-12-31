@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>He state:</b>
+  <%= @history_equipment.he_state %>
+</p>
+
+<p>
+  <b>He observation:</b>
+  <%= @history_equipment.he_observation %>
+</p>
+
+
+<%= link_to 'Edit', edit_history_equipment_path(@history_equipment) %> |
+<%= link_to 'Back', history_equipments_path %>

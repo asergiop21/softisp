@@ -1,0 +1,44 @@
+<h1>Listado Clientes</h1>
+<%= form_tag '', :method =>'get' do %>
+  <%= text_field_tag :cl_apellido %>
+  <%= submit_tag "search" %>
+<% end %>
+
+
+<% if @clientes != nil %>
+<table class="table" >
+  <tr>
+    <th>Apellido</th>
+    <th>Nombre</th>
+    <th>barrio</th>
+    <th>domicilio</th>
+    <th>telefono</th>
+    <th>celular</th>
+    <th>observaciones</th>
+    <th>numcliente</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clientes.each do |cliente| %>
+  <tr>
+    <td><%= cliente.cl_apellido %></td>
+    <td><%= cliente.cl_nombre %></td>
+    <td><%= cliente.cl_barrio %></td>
+    <td><%= cliente.cl_domicilio %></td>
+    <td><%= cliente.cl_telefono %></td>
+    <td><%= cliente.cl_celular %></td>
+    <td><%= cliente.cl_observaciones %></td>
+    <td><%= cliente.cl_numcliente %></td>
+    <td><%= link_to 'Editar',edit_cliente_path(cliente.id )%></td>
+    <td><%= link_to 'Borrar',cliente, method: :delete, data: { confirm: 'Desea Eliminar el Registro?' } %></td>
+    <td><%= link_to 'Pagos', "clientes/#{cliente.id}/pagos"  %></td>
+    <td><%= link_to 'Mikrotik', "clientes/#{cliente.id}/clientesmkts/new"  %></td>
+  </tr>
+<% end %>
+
+</table>
+
+<% end %>
+<br />

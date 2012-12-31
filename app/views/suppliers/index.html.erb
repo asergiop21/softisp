@@ -1,0 +1,35 @@
+<h1>Listado de Proveedores</h1>
+
+<table class=table>
+  <tr>
+    <th>Nombre</th>
+    <th>Direccion</th>
+    <th>Localidad</th>
+    <th>Provincia</th>
+    <th>Celular</th>
+    <th>Celular 2</th>
+    <th>Telefono</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @suppliers.each do |supplier| %>
+  <tr>
+    <td><%= supplier.pv_name %></td>
+    <td><%= supplier.pv_address %></td>
+    <td><%= supplier.pv_locality %></td>
+    <td><%= supplier.pv_province %></td>
+    <td><%= supplier.pv_cel %></td>
+    <td><%= supplier.pv_cel1 %></td>
+    <td><%= supplier.pv_phone %></td>
+    <td><%= link_to 'Ver', supplier %></td>
+    <td><%= link_to 'Editar', edit_supplier_path(supplier) %></td>
+    <td><%= link_to 'Eliminar', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Proveedor', new_supplier_path %>

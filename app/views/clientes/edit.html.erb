@@ -1,0 +1,22 @@
+
+<div  class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><%= link_to "Datos", "#" %> </li>
+    <li><%= link_to "Mikrotik", "/clientes/#{params[:id]}/clientesmkts"%></li>
+    <li><%= link_to "Equipamiento", "/clientes/#{params[:id]}/client_equipments"%></li>
+  </ul>
+ <h2>Clientes - Mikrotik: <%= @cliente.cl_apellido + "  " + @cliente.cl_nombre %>  </h2>
+    <ul class="breadcrumb">
+       <li><a href="/clientes">Clientes</a> <span class="divider">/</span></li>
+       <li class="active">Editar</li>
+    </ul>
+
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+
+
+<h3>Editar Cliente</h3>
+<%= render 'form' %>
+
+</div>

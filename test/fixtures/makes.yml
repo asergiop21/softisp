@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mc_name: MyString
+  mc_observation: MyText
+
+two:
+  mc_name: MyString
+  mc_observation: MyText

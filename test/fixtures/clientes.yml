@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cl_apellido: MyString
+  cl_nombre: MyString
+  cl_barrio: MyString
+  cl_domicilio: MyString
+  cl_telefono: MyString
+  cl_celular: MyString
+  cl_celular2: MyString
+  cl_email: MyString
+  cl_dni: MyString
+  cl_observaciones: MyString
+  cl_cuit: MyString
+  cl_fecnac: 2012-11-09
+  cl_numcliente: MyString
+  cl_referencia: MyString
+  cl_empresa: 1
+  cl_user: 1
+  cl_fecha: 2012-11-09
+  cl_time: 2012-11-09 09:46:35
+  cl_elim: false
+  cl_domdes: MyString
+  cl_bardes: MyString
+  cl_refdes: MyString
+  cl_idcat: 1
+  cl_cat: MyString
+  cl_user: 1
+  cl_precliente: false
+
+two:
+  cl_apellido: MyString
+  cl_nombre: MyString
+  cl_barrio: MyString
+  cl_domicilio: MyString
+  cl_telefono: MyString
+  cl_celular: MyString
+  cl_celular2: MyString
+  cl_email: MyString
+  cl_dni: MyString
+  cl_observaciones: MyString
+  cl_cuit: MyString
+  cl_fecnac: 2012-11-09
+  cl_numcliente: MyString
+  cl_referencia: MyString
+  cl_empresa: 1
+  cl_user: 1
+  cl_fecha: 2012-11-09
+  cl_time: 2012-11-09 09:46:35
+  cl_elim: false
+  cl_domdes: MyString
+  cl_bardes: MyString
+  cl_refdes: MyString
+  cl_idcat: 1
+  cl_cat: MyString
+  cl_user: 1
+  cl_precliente: false

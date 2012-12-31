@@ -1,0 +1,50 @@
+<div  class="tabbable">
+  <ul class="nav nav-tabs">
+    <li ><%= link_to "Datos", "/clientes/#{@cliente.id}/edit" %> </li>
+    <li><%= link_to "Mikrotik", "/clientes/#{@cliente.id}/clientesmkts"%></li>
+    <li class="active"><%= link_to "Equipamiento", "/clientes/#{@cliente.id}/client_equipments"%></li>
+  </ul>
+</div>
+
+<h2>Clientes - Equipamiento: <%= @cliente.cl_apellido + "  " + @cliente.cl_nombre %>  </h2>
+    <ul class="breadcrumb">
+       <li><a href="/clientes">Clientes</a> <span class="divider">/</span></li>
+       <li class="active">Equipamiento</li>
+    </ul>
+
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+
+
+<table class=table>
+  <tr>
+    <th>Estado</th>
+    <th>Observación</th>
+    <th>Resp equipo</th>
+    <th>Resp switch</th>
+    <th>Resp trafo</th>
+    <th>linked</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @client_equipments.each do |client_equipment| %>
+  <tr>
+    <td><%=  %>sdf</td>
+    <td><%= client_equipment.ce_state %></td>
+    <td><%= client_equipment.ce_observation %></td>
+    <td><%= client_equipment.ce_resp_equip %></td>
+    <td><%= client_equipment.ce_respswitch %></td>
+    <td><%= client_equipment.ce_resptrafo %></td>
+    <td><%= client_equipment.ce_linked %></td>
+    <td><%= link_to 'Editar', edit_cliente_client_equipment_path(@cliente, client_equipment) %></td>
+    <td><%= link_to 'Eliminar', cliente_client_equipment_path(@cliente, client_equipment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to "Agregar Equipo", new_cliente_client_equipment_path(@cliente.id) %>
+
+<br />
+

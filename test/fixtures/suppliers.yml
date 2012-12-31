@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pv_name: MyString
+  pv_address: MyString
+  pv_locality: MyString
+  pv_province: MyString
+  pv_cel: MyString
+  pv_cel1: MyString
+  pv_phone: MyString
+
+two:
+  pv_name: MyString
+  pv_address: MyString
+  pv_locality: MyString
+  pv_province: MyString
+  pv_cel: MyString
+  pv_cel1: MyString
+  pv_phone: MyString

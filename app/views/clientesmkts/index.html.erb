@@ -1,0 +1,41 @@
+<div  class="tabbable">
+  <ul class="nav nav-tabs">
+    <li ><%= link_to "Datos", "/clientes/#{@cliente.id}/edit" %> </li>
+    <li class="active"><%= link_to "Mikrotik", "#"%></li>
+    <li><%= link_to "Equipamiento", "/clientes/#{@cliente.id}/client_equipments"%></li>
+  </ul>
+</div>
+
+<h2>Clientes - Mikrotik: <%= @cliente.cl_apellido + "  " + @cliente.cl_nombre %>  </h2>
+    <ul class="breadcrumb">
+       <li><a href="/clientes">Clientes</a> <span class="divider">/</span></li>
+       <li class="active">Mikrotik</li>
+    </ul>
+
+
+<table class="table">
+  <tr>
+    <th>Target Addr</th>
+    <th>Priority</th>
+    <th>Max Limit</th>
+    <th>Min Limit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clientesmkt.each do |clientesmkt| %>
+  <tr>
+    <td><%= clientesmkt.cmk_targetaddr %></td>
+    <td><%= clientesmkt.cmk_priority %></td>
+    <td><%= clientesmkt.cmk_maxlimit %></td>
+    <td><%= clientesmkt.cmk_minlimit %></td>
+    <td><%= link_to "Editar", edit_cliente_clientesmkt_path(@cliente, clientesmkt) %></td>
+    <td><%= link_to "Borrar", cliente_clientesmkt_path(@cliente, clientesmkt), method: :delete, data: { confirm: 'Desea Eliminar el Registro?' } %></td>
+  </tr>
+<% end %>
+</table>
+    <%= link_to 'Agregar MKT', "/clientes/#{@cliente.id}/clientesmkts/new"  %>
+ 
+<br />
+

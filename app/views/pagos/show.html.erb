@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<%# :pg_debe, :pg_detalle, :pg_fecha, :pg_haber, :pg_idcuota, :pg_numcheq, :pg_numfact, :pg_numtar, :pg_user, :cliente_id %>
+
+<p>
+  <b>Debe:</b>
+  <%= @pago.pg_debe %>
+</p>
+
+<p>
+  <b>Haber:</b>
+  <%= @pago.pg_haber %>
+</p>
+
+<p>
+  <b>Detalle:</b>
+  <%= @pago.pg_detalle %>
+</p>
+
+<p style="color:red"><b>Agregar los campos q faltan!!!</b></p>
+
+<%= link_to 'Edit', edit_cliente_pago_path(@cliente, @pago) %> |
+<%= link_to 'Back', cliente_pagos_path(@cliente) %>

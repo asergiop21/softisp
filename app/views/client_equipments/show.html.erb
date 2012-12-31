@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ce state:</b>
+  <%= @client_equipment.ce_state %>
+</p>
+
+<p>
+  <b>Ce observation:</b>
+  <%= @client_equipment.ce_observation %>
+</p>
+
+<p>
+  <b>Ce resp equip:</b>
+  <%= @client_equipment.ce_resp_equip %>
+</p>
+
+<p>
+  <b>Ce respswitch:</b>
+  <%= @client_equipment.ce_respswitch %>
+</p>
+
+<p>
+  <b>Ce resptrafo:</b>
+  <%= @client_equipment.ce_resptrafo %>
+</p>
+
+<p>
+  <b>Ce linked:</b>
+  <%= @client_equipment.ce_linked %>
+</p>
+
+
+<%= link_to 'Edit', edit_cliente_client_equipment_path(@cliente, @client_equipment) %> |
+<%= link_to 'Back', cliente_client_equipments_path %>

@@ -1,0 +1,51 @@
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+
+        <!-- btn-navbar es el botón que reemplaza a los links ciuando la resolución es muy chica -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </a>
+       <!-- Marca o Logo -->
+         <%= link_to 'Sistema de Gestión', root_path, :class => 'brand' %>
+         <div class="nav-collapse">    
+            <ul class="nav">
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes <b class="caret"></b>           </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Nuevo","/clientes/new"%> </li>
+                  <li><%= link_to "Consulta","/clientes"%> </li>
+                  <li><%= link_to "Bajas","/clientes"%> </li>
+                </ul>
+                </li>
+            </ul>
+          <ul class="nav">
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pagos y Servicios<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Resumen Pagos","/pagos"%> </li>
+                </ul>
+                </li>
+            </ul>
+          <ul class="nav">
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuración<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Localidades","/localidades"%> </li>
+                  <li><%= link_to "Planes","/planes"%> </li>
+                  <li><%= link_to "Mikrotik","/mktcxes"%> </li>
+                  <li><%= link_to "Modelos", "/models"%> </li>
+                  <li><%= link_to "Marca","/makes"%> </li>
+                  <li><%= link_to "Proveedor","/suppliers"%> </li>
+                  <li><%= link_to "Equipos","/equipment"%> </li>
+                </ul>
+                </li>
+            </ul>
+            <ul class="nav pull-rigth">
+              <%= link_to current_user.email%>|<%= link_to "Logout", destroy_user_session_path, :method => :delete %></ul>
+
+          <% link_to image_tag("icons-add.png", :size => "25x25", :title=>"Agregar", :alt=>"Agregar")+"\vAgregar" , "/preclientes/new", :class=>"pull-right"   %>
+
+        </div>
+    </div>
+  </div>
+</div>

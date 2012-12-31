@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre</b>
+  <%= @supplier.pv_name %>
+</p>
+
+<p>
+  <b>Dirección</b>
+  <%= @supplier.pv_address %>
+</p>
+
+<p>
+  <b>Localidad</b>
+  <%= @supplier.pv_locality %>
+</p>
+
+<p>
+  <b>Provincia</b>
+  <%= @supplier.pv_province %>
+</p>
+
+<p>
+  <b>Celular</b>
+  <%= @supplier.pv_cel %>
+</p>
+
+<p>
+  <b>Celular 2</b>
+  <%= @supplier.pv_cel1 %>
+</p>
+
+<p>
+  <b>Telefono</b>
+  <%= @supplier.pv_phone %>
+</p>
+
+
+<%= link_to 'Editar', edit_supplier_path(@supplier) %> |
+<%= link_to 'Atras', suppliers_path %>

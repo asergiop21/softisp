@@ -1,0 +1,18 @@
+<div  class="tabbable">
+  <ul class="nav nav-tabs">
+    <li><%= link_to "Datos", "/clientes/#{@cliente.id}/edit" %></li>
+    <li class="active disabled"><%= link_to "Mikrotik1", "#", :class=> :disabled %></li>
+  </ul>
+ 
+  <h2>Clientes - Mikrotik:<%= @cliente.cl_apellido + "  " + @cliente.cl_nombre %>  </h2>
+    <ul class="breadcrumb">
+       <li><a href="/clientes">Clientes</a> <span class="divider">/</span></li>
+       <li> <%= link_to "Mikrotik", "/clientes/#{@cliente.id}/clientesmkts" %> <span class="divider">/</span></li>
+       <li class="active">Editar</li>
+    </ul>
+
+
+<h3>Editar Cliente</h3>
+<%= render 'form' %>
+
+</div>
