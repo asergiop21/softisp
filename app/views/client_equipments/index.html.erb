@@ -19,7 +19,6 @@
 
 <table class=table>
   <tr>
-    <th>Estado</th>
     <th>Observación</th>
     <th>Resp equipo</th>
     <th>Resp switch</th>
@@ -31,8 +30,6 @@
 
 <% @client_equipments.each do |client_equipment| %>
   <tr>
-    <td><%=  %>sdf</td>
-    <td><%= client_equipment.ce_state %></td>
     <td><%= client_equipment.ce_observation %></td>
     <td><%= client_equipment.ce_resp_equip %></td>
     <td><%= client_equipment.ce_respswitch %></td>

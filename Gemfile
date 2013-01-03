@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 gem 'thin'
 gem 'ruby-asterisk'
-
 gem 'validates_timeliness'
 
 # Bases de datos
@@ -25,10 +24,7 @@ group :assets do
   gem 'therubyracer',  :platform => :ruby
   gem 'uglifier', '>= 1.0.3'
 end
-
 gem 'jquery-rails'
-
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -42,4 +38,7 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+ gem 'debugger'
+#gem 'linecache19', '~>0.5.12'
+#gem 'debugger-linecache'
+#gem 'ruby-debug19'

@@ -50,8 +50,9 @@ before_filter :authenticate_user!, :except =>[:some_action_without_auth]
   def create
     @cliente = Cliente.find(params[:cliente_id])
     @client_equipment = @cliente.client_equipments.new(params[:client_equipment])
-    @equipment = Equipment.find(@client_equipment[:equipment_id])
-    @equipment.update_attributes(:eq_state => '2')
+
+#    @equipment = Equipment.find(@client_equipment[:equipment_id])
+#    @equipment.update_attributes(:eq_state => '3')
   
 
 
@@ -75,7 +76,7 @@ before_filter :authenticate_user!, :except =>[:some_action_without_auth]
 
     respond_to do |format|
       if @client_equipment.update_attributes(params[:client_equipment])
-        format.html { redirect_to cliente_client_equipments[@cliente, @client_equipment], notice: 'Client equipment was successfully updated.' }
+        format.html { redirect_to [@cliente, @client_equipment], notice: 'Client equipment was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

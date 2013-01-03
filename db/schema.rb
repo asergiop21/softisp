@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121212221802) do
+ActiveRecord::Schema.define(:version => 20121226223920) do
 
   create_table "admin_notes", :force => true do |t|
     t.string   "resource_id",     :null => false
@@ -180,14 +180,15 @@ ActiveRecord::Schema.define(:version => 20121212221802) do
 
   create_table "planes", :force => true do |t|
     t.string   "pl_nombre"
-    t.decimal  "pl_importe", :precision => 8, :scale => 2
+    t.decimal  "pl_importe",   :precision => 8, :scale => 2
     t.string   "pl_vel"
     t.boolean  "pl_elim"
     t.integer  "pl_user"
-    t.decimal  "pl_recar1",  :precision => 5, :scale => 2
-    t.decimal  "pl_recar2",  :precision => 5, :scale => 2
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.decimal  "pl_recar1",    :precision => 5, :scale => 2
+    t.decimal  "pl_recar2",    :precision => 5, :scale => 2
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+    t.string   "pl_velbajada"
   end
 
   create_table "suppliers", :force => true do |t|

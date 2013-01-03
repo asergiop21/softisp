@@ -2,6 +2,7 @@
 
 <table class=table>
   <tr>
+    <th>Id</th>
     <th>Mac</th>
     <th>Estado</th>
     <th>Observación</th>
@@ -14,6 +15,7 @@
 
 <% @equipment.each do |equipment| %>
   <tr>
+    <td><%= equipment.id %></td>
     <td><%= equipment.eq_mac %></td>
     <td><%= state(equipment.eq_state) %></td>
     <td><%= equipment.eq_observation %></td>

@@ -4,11 +4,11 @@
         <div class="row-fluid">
 
             <%= f.error_notification %>
-              <div class="form-inputs span6">
+            <div class="form-inputs span6">
                   <%= f.input :equipment_id, :label=> 'Equipamiento' do %>
-                    <%= f.select :equipment_id,  Equipment.where(:eq_state=>'1').map {|l|[l.eq_mac, l.id]}, prompt: "Seleccione una mac" %>
+                    <%= f.select :equipment_id,  Equipment.where(:eq_state=>[1,3]).map {|l|[l.eq_mac, l.id]}, prompt: "Seleccione una mac" %>
                     <% end  %>
-                  <%= f.input :ce_observation, :label => 'Observación', :input_html =>{ :rows=>'5'} %>
+                  <%= f.input :ce_observation, :label => 'Observación', :input_html =>{ :rows=>'8'} %>
               </div>
   <div class="form-inputs span6">
     <%= f.input :ce_resp_equip, :label => 'Responsable Equipo' %>

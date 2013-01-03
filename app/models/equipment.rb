@@ -4,17 +4,16 @@ class Equipment < ActiveRecord::Base
   has_many :suppliers
   has_many :models
 
-  after_save :history_eq
-
-
-
-
-  def history_eq
+  after_create :history_eq
+  after_update :history_equp
   
-    bill.create(attr :he_state, attr :he_observation, attr :equipment_id )
-
+  def history_eq
+    HistoryEquipment.create(:he_state => self.eq_state, :he_observation =>'Alta de Equipo', :equipment_id=>self.id )
   end
 
+  def history_equp
+    HistoryEquipment.create(:he_state => self.eq_state, :he_observation =>'Se Modifico datos de  Equipo', :equipment_id=>self.id )
+  end
 
 
 end

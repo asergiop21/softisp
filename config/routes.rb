@@ -17,8 +17,6 @@ Ispsoft::Application.routes.draw do
 
   resources :mktcxes
 
-
-
   resources :clientes do
     resources :pagos
     resources :clientesmkts

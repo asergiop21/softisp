@@ -41,7 +41,6 @@ def index
   # GET /clientes/new.json
   def new
     @cliente = Cliente.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @cliente }
@@ -91,6 +90,8 @@ def index
     @cliente = Cliente.find(params[:id])
     @cliente.destroy
     @crear = Clientesmkt.create_mikrotik
+
+
     respond_to do |format|
       format.html { redirect_to clientes_url }
       format.json { head :no_content }
